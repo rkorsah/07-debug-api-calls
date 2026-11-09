@@ -7,7 +7,7 @@ const watchlistContainer = document.getElementById('watchlist');
 
 // Function to fetch movies from the OMDb API
 async function fetchMovies(query) {
-  const apiKey = 'your-api-key'; // Replace with your OMDb API key
+  const apiKey = 'RkPDQbhJkq6jczhRB6RkG6KfHghrcpfTKGNCgW6t';
   const url = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;
 
   // Fetch data from the API
@@ -50,7 +50,7 @@ async function updateWatchlistDisplay() {
     watchlistContainer.innerHTML = '<p>Your watchlist is empty. Search for movies to add!</p>';
   } else {
     watchlist.forEach(async (movieID) => {
-      const apiKey = 'your-api-key'; // Replace with your OMDb API key
+      const apiKey = 'RkPDQbhJkq6jczhRB6RkG6KfHghrcpfTKGNCgW6t';
       const url = `https://www.omdbapi.com/?i=${movieID}&apikey=${apiKey}`;
       const response = await fetch(url);
       const movie = await response.json();
